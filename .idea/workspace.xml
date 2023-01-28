@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee618677-a5ba-4e4f-a128-5f2c1010071c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/BrowserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/driver/DriverFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/component/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/component/ComponentCssSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/component/ComponentxPathSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/pages/BasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/pages/SigninPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/signin/AlertComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/signin/SignInComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/support/AssertEx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test_data/common/DataObjectBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test_data/signin/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test_data/signin/Alert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test_data/signin/InValidPassword.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test_data/signin/InvalidEmail.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test_flows/signin/SigninFlow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/signin/InvalidSigninTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/url/Urls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_suites/Regression.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KrMqnH38XRkqu7gBahITpU7niW" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "/Users/diep.nguyen/Appium/Amazon/src/main/java/test_data/signin",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/test_data/signin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG./Users/diep.nguyen/Appium/Amazon/src/main/resources/test_suites/Regression.xml">
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="tests.main" />
+      <module name="Amazon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Amazon" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Amazon" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InvalidSigninTest.testInvalidSignin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Amazon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.signin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.signin" />
+      <option name="MAIN_CLASS_NAME" value="tests.signin.InvalidSigninTest" />
+      <option name="METHOD_NAME" value="testInvalidSignin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/diep.nguyen/Appium/Amazon/src/main/resources/test_suites/Regression.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Amazon" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/test_suites/Regression.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG./Users/diep.nguyen/Appium/Amazon/src/main/resources/test_suites/Regression.xml" />
+        <item itemvalue="Application.main" />
+        <item itemvalue="TestNG.InvalidSigninTest.testInvalidSignin" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee618677-a5ba-4e4f-a128-5f2c1010071c" name="Changes" comment="" />
+      <created>1674728443076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1674728443076</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test_flows/signin/SigninFlow.java</url>
+          <line>92</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test_flows/signin/SigninFlow.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tests/signin/InvalidSigninTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
