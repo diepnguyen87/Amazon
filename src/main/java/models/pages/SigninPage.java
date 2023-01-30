@@ -1,8 +1,9 @@
 package models.pages;
 
-import models.signin.AlertComponent;
 import models.signin.SignInComponent;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class SigninPage extends BasePage{
 
@@ -14,7 +15,4 @@ public class SigninPage extends BasePage{
         return findComponent(SignInComponent.class, driver);
     }
 
-    public AlertComponent alertComp(){
-        return findComponent(AlertComponent.class, driver);
-    }
 }

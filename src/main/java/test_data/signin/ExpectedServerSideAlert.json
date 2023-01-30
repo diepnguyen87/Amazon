@@ -1,0 +1,10 @@
+[
+  {
+    "header": "There was a problem",
+    "content": "Your password is incorrect"
+  },
+  {
+    "header": "Important Message!",
+    "content": "To better protect your account, please re-enter your password and then enter the characters as they are shown in the image below."
+  }
+]

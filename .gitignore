@@ -13,3 +13,4 @@ buildNumber.properties
 screenshots
 allure-report
 allure-results
+src/main/java/test_data/signin/ValidPassword.json

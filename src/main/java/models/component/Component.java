@@ -4,7 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Constructor;
@@ -18,19 +20,19 @@ public class Component {
     protected WebDriver driver;
     protected WebElement component;
     protected WebDriverWait wait;
+    protected Actions actions;
     protected JavascriptExecutor jsExecutor;
 
     public Component(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         jsExecutor = ((JavascriptExecutor) driver);
+        actions = new Actions(driver);
     }
 
     public Component(WebDriver driver, WebElement component) {
-        this.driver = driver;
+        this(driver);
         this.component = component;
-        /*this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        jsExecutor = ((JavascriptExecutor) driver);*/
     }
 
     public WebElement getComponent() {
@@ -115,5 +117,19 @@ public class Component {
 
     private void scrollToElement(String position, WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(" + position + ");", element);
+    }
+
+    public void selectByVisibleText(By by, String value){
+        WebElement dropdownElem = component.findElement(by);
+        Select select = new Select(dropdownElem);
+        select.selectByVisibleText(value);
+    }
+
+    public By convertFromDynamicSelector(String selector, String value){
+        return By.xpath(String.format(selector, value));
+    }
+
+    public void hoverToElement(By by){
+        actions.moveToElement(component.findElement(by)).build().perform();
     }
 }

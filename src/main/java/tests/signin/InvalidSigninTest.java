@@ -1,6 +1,5 @@
 package tests.signin;
 
-import models.pages.SigninPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -12,7 +11,7 @@ import url.Urls;
 
 public class InvalidSigninTest extends BaseTest implements Urls {
 
-    //@Test(dataProvider = "invalidEmailData")
+    @Test(dataProvider = "invalidEmailData")
     public void testInvalidEmail(Account account) {
         WebDriver driver = getDriver();
         driver.get(baseURL.concat(signinSlug));
@@ -30,13 +29,13 @@ public class InvalidSigninTest extends BaseTest implements Urls {
         SigninFlow signinFlow = new SigninFlow(driver);
 
         String validEmail = account.getEmail().trim();
-        String invalidPassword = account.getPassword().trim();
+        String invalidPassword = account.getPassword();
         signinFlow.inputEmail(validEmail);
         signinFlow.inputPassword(invalidPassword);
         signinFlow.verifyPassword(invalidPassword);
     }
 
-    //@DataProvider
+    @DataProvider
     private Account[] invalidEmailData() {
         String emailLocation = "/src/main/java/test_data/signin/InvalidEmail.json";
         Account[] accounts = DataObjectBuilder.buildDataObjectFrom(emailLocation, Account[].class);

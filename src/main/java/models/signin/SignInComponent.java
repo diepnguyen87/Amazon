@@ -2,22 +2,22 @@ package models.signin;
 
 import models.component.Component;
 import models.component.ComponentCssSelector;
-import models.pages.SigninPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-@ComponentCssSelector("#authportal-main-section form")
+@ComponentCssSelector("#authportal-main-section")
 public class SignInComponent extends Component {
 
     private final By emailSel = By.cssSelector("[type='email']");
     private final By passwordSel = By.cssSelector("[type='password']");
     private final By continueSel = By.id("continue");
     private final By signinSel = By.id("signInSubmit");
-    private final By inlineAlertSel = By.cssSelector(".a-alert-container .a-alert-content");
+
+    private final By inlineAlertSel = By.cssSelector("form .a-alert-container .a-alert-content");
+    private By headerSel = By.cssSelector(".a-alert-heading");
+    private By contentSel = By.cssSelector(".a-alert-content");
+
     public SignInComponent(WebDriver driver, WebElement component) {
         super(driver, component);
     }
@@ -43,4 +43,13 @@ public class SignInComponent extends Component {
     public String getInlineAlert(){
         return component.findElement(inlineAlertSel).getText().trim();
     }
+
+    public String getHeader(){
+        return component.findElement(headerSel).getText().trim();
+    }
+
+    public String getContent(){
+        return component.findElement(contentSel).getText().trim();
+    }
+
 }

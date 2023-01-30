@@ -21,8 +21,8 @@ import java.util.*;
 
 public class BaseTest {
 
-    private List<DriverFactory> webdriverThreadPool = Collections.synchronizedList(new ArrayList<>());
-    private ThreadLocal<DriverFactory> driverThread;
+    private static List<DriverFactory> webdriverThreadPool = Collections.synchronizedList(new ArrayList<>());
+    private static ThreadLocal<DriverFactory> driverThread;
     private WebDriver driver;
     private String browser;
 

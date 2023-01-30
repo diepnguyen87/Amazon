@@ -8,27 +8,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class BasePage extends Component {
-    protected WebDriver driver;
 
+    protected By parent;
     public BasePage(WebDriver driver) {
-        //super(driver, driver.findElement(By.tagName("html")));
-        //super(driver, getElem());
         super(driver);
-        By parent = By.tagName("html");
-        By children = By.cssSelector("#authportal-main-section div");
-        wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(parent, children));
+        parent = By.tagName("html");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(parent));
         component = driver.findElement(parent);
-        this.driver = driver;
-    }
-
-    private WebElement getElem(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        By parent = By.tagName("html");
-        By children = By.cssSelector("");
-        wait.until(ExpectedConditions.presenceOfNestedElementLocatedBy(parent, children));
-        return driver.findElement(parent);
     }
 }
