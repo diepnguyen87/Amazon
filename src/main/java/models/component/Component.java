@@ -11,9 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Constructor;
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Component {
@@ -42,7 +40,6 @@ public class Component {
     public WebElement findElement(By by) {
         WebElement elem = null;
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(by));
             elem = component.findElement(by);
         } catch (NoSuchElementException e) {
             throw new RuntimeException("[ERROR] - Can NOT find the selector " + by);
@@ -119,17 +116,47 @@ public class Component {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(" + position + ");", element);
     }
 
-    public void selectByVisibleText(By by, String value){
-        WebElement dropdownElem = component.findElement(by);
+    public void selectByVisibleText(By by, String value) {
+        WebElement dropdownElem = findElement(by);
         Select select = new Select(dropdownElem);
         select.selectByVisibleText(value);
     }
 
-    public By convertFromDynamicSelector(String selector, String value){
+    public By convertFromDynamicSelector(String selector, String value) {
         return By.xpath(String.format(selector, value));
     }
 
-    public void hoverToElement(By by){
-        actions.moveToElement(component.findElement(by)).build().perform();
+    public void hoverToElement(By by) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        actions.moveToElement(findElement(by)).build().perform();
+    }
+
+    public boolean isSorted(List<Date> listOfDate) {
+        if (listOfDate.isEmpty() || listOfDate.size() == 1) {
+            return true;
+        }
+
+        Iterator<Date> iter = listOfDate.iterator();
+        Date current, previous = iter.next();
+        while (iter.hasNext()) {
+            current = iter.next();
+            if (previous.compareTo(current) < 0) {
+                return false;
+            }
+            previous = current;
+        }
+        return true;
+    }
+
+    public String getElementText(By by) {
+        return findElement(by).getText();
+    }
+
+    public void clickToElement(By by) {
+        findElement(by).click();
+    }
+
+    public boolean isDisplayed() {
+        return component.isDisplayed();
     }
 }

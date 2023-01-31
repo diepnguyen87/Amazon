@@ -1,15 +1,15 @@
 package models.global.header;
 
+import models.component.Component;
 import models.component.ComponentCssSelector;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.events.WebDriverEventListener;
-import org.openqa.selenium.support.ui.Select;
 
 @ComponentCssSelector("#nav-belt .nav-fill")
-public class NavFillComponent extends AccountnListComponent {
+public class NavFillComponent extends Component {
     private WebDriver driver;
+    private By departmentSel = By.cssSelector("#nav-search-dropdown-card");
     private By departmentDropdownSel = By.cssSelector("#searchDropdownBox");
     private By searchFieldSel = By.cssSelector("#twotabsearchtextbox");
     private By searchSubmitSel = By.cssSelector("#nav-search-submit-button");
@@ -21,11 +21,15 @@ public class NavFillComponent extends AccountnListComponent {
     }
 
     public void selectDepartmentByVisbleText(String value){
-        selectByVisibleText(departmentDropdownSel, value);
+        try{
+            selectByVisibleText(departmentDropdownSel, value);
+        }catch (NullPointerException e){
+            throw new NullPointerException("[ERROR] " + departmentDropdownSel + " is null");
+        }
     }
 
     public  void inputSearchField(String value){
-        WebElement searchElem = component.findElement(searchFieldSel);
+        WebElement searchElem = findElement(searchFieldSel);
         searchElem.sendKeys(value);
     }
 

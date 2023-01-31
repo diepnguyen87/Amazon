@@ -1,8 +1,8 @@
 package test_flows.global.header;
 
 import models.global.header.NavFillComponent;
-import models.global.header.NavLanguageComponent;
 import models.global.header.NavRightComponent;
+import models.global.header.popup.LanguageComponent;
 import models.pages.HomePage;
 import models.pages.SearchPage;
 import models.search.ResultListComponent;
@@ -34,7 +34,7 @@ public class SearchFlow {
         NavRightComponent navRightComp = homePage.navRightComp();
         navRightComp.hoverToLanguage();
 
-        NavLanguageComponent navLanguageComp = homePage.navLanguageComp();
+        LanguageComponent navLanguageComp = homePage.popupLanguageComp();
         navLanguageComp.selectLanguage(expectedLanguage);
     }
 
@@ -43,5 +43,13 @@ public class SearchFlow {
         ResultListComponent resultListComp = searchPage.resultListComp();
         int actualSize = resultListComp.itemResultList().size();
         Assert.assertEquals(actualSize, expectedSize);
+
+        searchPage.navRightComp().hoverToAccountList();
+        searchPage.yourAccountComp().clickOnSignOut();
+    }
+
+    public void searchByDepartment(String departmentName, String keyword){
+        selectDepartment(departmentName);
+        inputKeyword(keyword);
     }
 }

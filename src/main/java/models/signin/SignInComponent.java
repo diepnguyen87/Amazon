@@ -23,33 +23,33 @@ public class SignInComponent extends Component {
     }
 
     public void inputEmailAddress(String email){
-        WebElement emailElem = component.findElement(emailSel);
+        WebElement emailElem = findElement(emailSel);
         emailElem.sendKeys(email);
     }
 
     public void inputPassword(String password){
-        WebElement emailElem = component.findElement(passwordSel);
+        WebElement emailElem = findElement(passwordSel);
         emailElem.sendKeys(password);
     }
 
     public void clickOnContinueBtn(){
-        component.findElement(continueSel).click();
+        findElement(continueSel).click();
     }
 
     public void clickOnSigninBtn(){
-        component.findElement(signinSel).click();
+        findElement(signinSel).click();
     }
 
     public String getInlineAlert(){
-        return component.findElement(inlineAlertSel).getText().trim();
+        return findElement(inlineAlertSel).getText().trim();
     }
 
     public String getHeader(){
-        return component.findElement(headerSel).getText().trim();
+        return findElement(headerSel).getText().trim();
     }
 
     public String getContent(){
-        return component.findElement(contentSel).getText().trim();
+        return findElement(contentSel).getText().trim();
     }
 
 }

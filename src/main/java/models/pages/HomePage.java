@@ -1,9 +1,9 @@
 package models.pages;
 
 import models.global.header.NavFillComponent;
-import models.global.header.NavLanguageComponent;
+import models.global.header.popup.LanguageComponent;
 import models.global.header.NavRightComponent;
-import org.openqa.selenium.By;
+import models.global.header.popup.YourAccountComponent;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage extends BasePage{
@@ -14,10 +14,6 @@ public class HomePage extends BasePage{
         this.driver = driver;
     }
 
-    public boolean isHomePageDisplayed(){
-        return component.isDisplayed();
-    }
-
     public NavRightComponent navRightComp(){
         return findComponent(NavRightComponent.class, driver);
     }
@@ -26,7 +22,11 @@ public class HomePage extends BasePage{
         return findComponent(NavFillComponent.class, driver);
     }
 
-    public NavLanguageComponent navLanguageComp(){
-        return findComponent(NavLanguageComponent.class, driver);
+    public LanguageComponent popupLanguageComp(){
+        return findComponent(LanguageComponent.class, driver);
+    }
+
+    public YourAccountComponent yourAccountComp(){
+        return findComponent(YourAccountComponent.class, driver);
     }
 }

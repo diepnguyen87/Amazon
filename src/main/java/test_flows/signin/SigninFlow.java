@@ -1,6 +1,5 @@
 package test_flows.signin;
 
-import models.global.header.AccountnListComponent;
 import models.global.header.NavRightComponent;
 import models.pages.HomePage;
 import models.pages.SigninPage;
@@ -8,7 +7,6 @@ import models.signin.SignInComponent;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import test_data.common.DataObjectBuilder;
-import test_data.signin.Account;
 import test_data.signin.Alert;
 
 import java.util.Arrays;
@@ -106,7 +104,7 @@ public class SigninFlow {
                 break;
             }
         }
-        if(match == false){
+        if (match == false) {
             Assert.fail("[ERROR] Mismatch alert content does NOT map with expected list"
                     + "\nActual: " + actualAlert.getContent());
         }
@@ -129,16 +127,19 @@ public class SigninFlow {
     public void verifyLoginSuccess(String expectedUserName) {
         HomePage homePage = new HomePage(driver);
 
-        if(homePage.isHomePageDisplayed()){
+        if (homePage.isDisplayed()) {
             NavRightComponent navRightComp = homePage.navRightComp();
             String actualUserName = navRightComp.getLoginAccount();
             Assert.assertTrue(actualUserName.contains(expectedUserName));
-        }else{
+
+            navRightComp.hoverToAccountList();
+            homePage.yourAccountComp().clickOnSignOut();
+        } else {
             Assert.fail("[ERROR] Login Failed");
         }
     }
 
-    public void signin(String email, String password){
+    public void login(String email, String password) {
         inputEmail(email);
         inputPassword(password);
     }
