@@ -19,7 +19,7 @@ public class SearchFlow {
     public void selectDepartment(String departmentName) {
         HomePage homePage = new HomePage(driver);
         NavFillComponent navFillComp = homePage.navFillComp();
-        navFillComp.selectDepartmentByVisbleText(departmentName);
+        navFillComp.selectDepartmentByVisibleText(departmentName);
     }
 
     public void inputKeyword(String keyword) {

@@ -1,7 +1,9 @@
 package driver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.*;
 
 import java.net.URL;
@@ -43,6 +45,21 @@ public class DriverFactory {
         return driver;
     }
 
+
+    public WebDriver getGeckoDriver(String browserName) {
+        BrowserType browserType = getBrowserType(browserName.toUpperCase());
+
+        switch (browserType) {
+            case FIREFOX:
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+        }
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        return driver;
+    }
     private BrowserType getBrowserType(String browserName) {
         BrowserType browserType = null;
         try {

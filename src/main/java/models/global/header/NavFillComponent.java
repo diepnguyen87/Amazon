@@ -9,8 +9,8 @@ import org.openqa.selenium.WebElement;
 @ComponentCssSelector("#nav-belt .nav-fill")
 public class NavFillComponent extends Component {
     private WebDriver driver;
-    private By departmentSel = By.cssSelector("#nav-search-dropdown-card");
     private By departmentDropdownSel = By.cssSelector("#searchDropdownBox");
+    private By departmentDropdownOptionSel = By.xpath("//select[@id='searchDropdownBox']/option[contains(text(), 'Books')]");
     private By searchFieldSel = By.cssSelector("#twotabsearchtextbox");
     private By searchSubmitSel = By.cssSelector("#nav-search-submit-button");
 
@@ -20,7 +20,7 @@ public class NavFillComponent extends Component {
         this.driver = driver;
     }
 
-    public void selectDepartmentByVisbleText(String value){
+    public void selectDepartmentByVisibleText(String value){
         try{
             selectByVisibleText(departmentDropdownSel, value);
         }catch (NullPointerException e){

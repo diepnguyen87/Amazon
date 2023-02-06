@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="11" passed="9" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-02-06T15:17:07 ICT" name="Regression" finished-at="2023-02-06T15:21:26 ICT" duration-ms="259975">
+    <groups>
+    </groups>
+    <test started-at="2023-02-06T15:17:07 ICT" name="Group 2" finished-at="2023-02-06T15:19:04 ICT" duration-ms="117656">
+      <class name="tests.search.SearchTest">
+        <test-method is-config="true" signature="initBrowserSession(java.lang.String)[pri:0, instance:tests.search.SearchTest@81d9a72]" started-at="2023-02-06T15:17:07 ICT" name="initBrowserSession" description="init browser session" finished-at="2023-02-06T15:17:07 ICT" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowserSession -->
+        <test-method signature="testSearch(test_data.signin.Account)[pri:0, instance:tests.search.SearchTest@81d9a72]" started-at="2023-02-06T15:17:07 ICT" name="testSearch" data-provider="validAccountData" finished-at="2023-02-06T15:19:04 ICT" duration-ms="117122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='diepniit.nguyenhong@gmail.com', password='!)aArdvark07', userName='diepnguyen'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearch -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.search.SearchTest@81d9a72]" started-at="2023-02-06T15:19:04 ICT" name="captureScreenshot" finished-at="2023-02-06T15:19:04 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSearch status=SUCCESS method=SearchTest.testSearch(test_data.signin.Account)[pri:0, instance:tests.search.SearchTest@81d9a72] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method is-config="true" signature="closeBrowserSession()[pri:0, instance:tests.search.SearchTest@81d9a72]" started-at="2023-02-06T15:19:04 ICT" name="closeBrowserSession" finished-at="2023-02-06T15:19:04 ICT" duration-ms="244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- tests.search.SearchTest -->
+    </test> <!-- Group 2 -->
+    <test started-at="2023-02-06T15:17:07 ICT" name="Group 3" finished-at="2023-02-06T15:20:08 ICT" duration-ms="181354">
+      <class name="tests.signin.ValidSigninTest">
+        <test-method signature="testValidSignin(test_data.signin.Account)[pri:0, instance:tests.signin.ValidSigninTest@6f3187b0]" started-at="2023-02-06T15:19:30 ICT" name="testValidSignin" data-provider="validAccountData" finished-at="2023-02-06T15:20:08 ICT" duration-ms="37306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='diepniit.nguyenhong@gmail.com', password='!)aArdvark07', userName='diepnguyen'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidSignin -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.ValidSigninTest@6f3187b0]" started-at="2023-02-06T15:20:08 ICT" name="captureScreenshot" finished-at="2023-02-06T15:20:08 ICT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidSignin status=SUCCESS method=ValidSigninTest.testValidSignin(test_data.signin.Account)[pri:0, instance:tests.signin.ValidSigninTest@6f3187b0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+      </class> <!-- tests.signin.ValidSigninTest -->
+      <class name="tests.signin.InvalidSigninTest">
+        <test-method is-config="true" signature="initBrowserSession(java.lang.String)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:17:07 ICT" name="initBrowserSession" description="init browser session" finished-at="2023-02-06T15:17:07 ICT" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowserSession -->
+        <test-method signature="testInvalidEmail(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:17:07 ICT" name="testInvalidEmail" data-provider="invalidEmailData" finished-at="2023-02-06T15:17:44 ICT" duration-ms="36989" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email=' ', password=' ', userName=''}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmail -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:17:44 ICT" name="captureScreenshot" finished-at="2023-02-06T15:17:44 ICT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidEmail status=SUCCESS method=InvalidSigninTest.testInvalidEmail(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method signature="testInvalidEmail(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:17:44 ICT" name="testInvalidEmail" data-provider="invalidEmailData" finished-at="2023-02-06T15:18:00 ICT" duration-ms="16471" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='email', password='', userName=''}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmail -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:18:00 ICT" name="captureScreenshot" finished-at="2023-02-06T15:18:00 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidEmail status=SUCCESS method=InvalidSigninTest.testInvalidEmail(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method signature="testInvalidEmail(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:18:00 ICT" name="testInvalidEmail" data-provider="invalidEmailData" finished-at="2023-02-06T15:18:19 ICT" duration-ms="18238" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='OppositionpoliticianswhohavelongallegedthatMrAdanihasbenefittedbecauseofhisproximitytoIndianPrimeMinisterNarendraModihaveb@gmail.', password='', userName=''}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmail -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:18:19 ICT" name="captureScreenshot" finished-at="2023-02-06T15:18:19 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidEmail status=SUCCESS method=InvalidSigninTest.testInvalidEmail(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method signature="testInvalidPassword(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:18:19 ICT" name="testInvalidPassword" data-provider="invalidPasswordData" finished-at="2023-02-06T15:18:43 ICT" duration-ms="24265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='email@gmail.com', password='', userName=''}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidPassword -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:18:43 ICT" name="captureScreenshot" finished-at="2023-02-06T15:18:43 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidPassword status=SUCCESS method=InvalidSigninTest.testInvalidPassword(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method signature="testInvalidPassword(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:18:43 ICT" name="testInvalidPassword" data-provider="invalidPasswordData" finished-at="2023-02-06T15:19:07 ICT" duration-ms="23917" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='email@gmail.com', password=' ', userName=''}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidPassword -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:19:07 ICT" name="captureScreenshot" finished-at="2023-02-06T15:19:07 ICT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidPassword status=SUCCESS method=InvalidSigninTest.testInvalidPassword(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method signature="testInvalidPassword(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:19:07 ICT" name="testInvalidPassword" data-provider="invalidPasswordData" finished-at="2023-02-06T15:19:30 ICT" duration-ms="23502" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='email@gmail.com', password='password', userName=''}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidPassword -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:19:30 ICT" name="captureScreenshot" finished-at="2023-02-06T15:19:30 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidPassword status=SUCCESS method=InvalidSigninTest.testInvalidPassword(test_data.signin.Account)[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method is-config="true" signature="closeBrowserSession()[pri:0, instance:tests.signin.InvalidSigninTest@6dd7b5a3]" started-at="2023-02-06T15:20:08 ICT" name="closeBrowserSession" finished-at="2023-02-06T15:20:08 ICT" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- tests.signin.InvalidSigninTest -->
+    </test> <!-- Group 3 -->
+    <test started-at="2023-02-06T15:17:07 ICT" name="Group 1" finished-at="2023-02-06T15:21:26 ICT" duration-ms="259975">
+      <class name="tests.sort.SortByOptionTest">
+        <test-method is-config="true" signature="initBrowserSession(java.lang.String)[pri:0, instance:tests.sort.SortByOptionTest@15a04efb]" started-at="2023-02-06T15:17:07 ICT" name="initBrowserSession" description="init browser session" finished-at="2023-02-06T15:17:07 ICT" duration-ms="81" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initBrowserSession -->
+        <test-method signature="testSortByOption(test_data.signin.Account)[pri:0, instance:tests.sort.SortByOptionTest@15a04efb]" started-at="2023-02-06T15:17:07 ICT" name="testSortByOption" data-provider="validAccountData" finished-at="2023-02-06T15:21:26 ICT" duration-ms="259492" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Account{email='diepniit.nguyenhong@gmail.com', password='!)aArdvark07', userName='diepnguyen'}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSortByOption -->
+        <test-method is-config="true" signature="captureScreenshot(org.testng.ITestResult)[pri:0, instance:tests.sort.SortByOptionTest@15a04efb]" started-at="2023-02-06T15:21:26 ICT" name="captureScreenshot" finished-at="2023-02-06T15:21:26 ICT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSortByOption status=SUCCESS method=SortByOptionTest.testSortByOption(test_data.signin.Account)[pri:0, instance:tests.sort.SortByOptionTest@15a04efb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- captureScreenshot -->
+        <test-method is-config="true" signature="closeBrowserSession()[pri:0, instance:tests.sort.SortByOptionTest@15a04efb]" started-at="2023-02-06T15:21:26 ICT" name="closeBrowserSession" finished-at="2023-02-06T15:21:26 ICT" duration-ms="197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowserSession -->
+      </class> <!-- tests.sort.SortByOptionTest -->
+    </test> <!-- Group 1 -->
+  </suite> <!-- Regression -->
+</testng-results>

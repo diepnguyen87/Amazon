@@ -1,9 +1,6 @@
 package models.component;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -12,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.lang.reflect.Constructor;
 import java.time.Duration;
 import java.util.*;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 public class Component {
@@ -30,6 +28,11 @@ public class Component {
 
     public Component(WebDriver driver, WebElement component) {
         this(driver);
+        try{
+            Thread.sleep(5000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         this.component = component;
     }
 
@@ -153,6 +156,7 @@ public class Component {
     }
 
     public void clickToElement(By by) {
+        wait.until(ExpectedConditions.elementToBeClickable(by));
         findElement(by).click();
     }
 

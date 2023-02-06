@@ -126,17 +126,16 @@ public class SigninFlow {
 
     public void verifyLoginSuccess(String expectedUserName) {
         HomePage homePage = new HomePage(driver);
+        NavRightComponent navRightComp = homePage.navRightComp();
 
         if (homePage.isDisplayed()) {
-            NavRightComponent navRightComp = homePage.navRightComp();
             String actualUserName = navRightComp.getLoginAccount();
             Assert.assertTrue(actualUserName.contains(expectedUserName));
-
-            navRightComp.hoverToAccountList();
-            homePage.yourAccountComp().clickOnSignOut();
         } else {
             Assert.fail("[ERROR] Login Failed");
         }
+        navRightComp.hoverToAccountList();
+        homePage.yourAccountComp().clickOnSignOut();
     }
 
     public void login(String email, String password) {

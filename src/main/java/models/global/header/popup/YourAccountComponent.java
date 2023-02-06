@@ -5,6 +5,7 @@ import models.component.ComponentCssSelector;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 @ComponentCssSelector("#nav-al-your-account")
 public class YourAccountComponent extends Component {
@@ -15,6 +16,7 @@ public class YourAccountComponent extends Component {
     }
 
     public void clickOnSignOut(){
+        wait.until(ExpectedConditions.elementToBeClickable(signOutSel));
         clickToElement(signOutSel);
     }
 }

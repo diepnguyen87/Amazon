@@ -20,7 +20,7 @@ public class SearchTest extends BaseTest implements Urls {
         signinFlow.login(account.getEmail(), account.getPassword());
 
         SearchFlow searchFlow = new SearchFlow(driver);
-        searchFlow.selectDepartment("Books");
+         searchFlow.selectDepartment("Books");
         searchFlow.selectLanguage("English");
         searchFlow.inputKeyword("apple");
         searchFlow.verifyNumOfResultItem(16);

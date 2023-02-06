@@ -4,7 +4,7 @@
     <parameter name="browser" value="chrome" />
     <test name="signin">
         <classes>
-           <!-- <class name="tests.signin.InvalidSigninTest" />-->
+            <class name="tests.signin.InvalidSigninTest" />
             <class name="tests.signin.ValidSigninTest" />
             <class name="tests.search.SearchTest" />
             <class name="tests.sort.SortByOptionTest" />
